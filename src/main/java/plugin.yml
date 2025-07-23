@@ -3,7 +3,7 @@ main: com.animaleconomy.Brain
 version: 0.0.1
 api-version: 1.16
 author: mrbear25
-softdepend: [PlaceholderAPI]
+softdepend: [PlaceholderAPI, Plan]
 description: Animal Economy
 commands:
   ae:

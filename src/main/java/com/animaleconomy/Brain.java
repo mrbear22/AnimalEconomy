@@ -22,6 +22,10 @@ public class Brain extends JavaPlugin {
             new Placeholders(this).register();
         }
 
+        if (getServer().getPluginManager().getPlugin("Plan") != null) {
+            new PlanAPI().initialize();
+        }
+        
         getLogger().info("AnimalEconomy Plugin Enabled!");
     }
 
