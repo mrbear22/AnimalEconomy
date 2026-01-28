@@ -1,6 +1,6 @@
 name: AnimalEconomy
-main: com.animaleconomy.Brain
-version: 0.0.1
+main: com.animaleconomy.AnimalEconomy
+version: 0.0.2
 api-version: 1.16
 author: mrbear25
 softdepend: [PlaceholderAPI, Plan]

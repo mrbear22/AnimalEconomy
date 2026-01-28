@@ -6,9 +6,9 @@ import org.bukkit.entity.Player;
 
 public class Placeholders extends PlaceholderExpansion {
 
-    private final Brain plugin;
+    private final AnimalEconomy plugin;
 
-    public Placeholders(Brain plugin) {
+    public Placeholders(AnimalEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -45,7 +45,7 @@ public class Placeholders extends PlaceholderExpansion {
 
         for (EntityType type : EntityType.values()) {
             if (identifier.equals(type.name().toLowerCase())) {
-                return String.valueOf(plugin.getAnimalEconomy().getKills(player.getUniqueId(), type));
+                return String.valueOf(plugin.getKills(player.getUniqueId(), type));
             }
         }
 

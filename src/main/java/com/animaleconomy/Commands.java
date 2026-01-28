@@ -16,9 +16,9 @@ import java.util.stream.Collectors;
 
 public class Commands implements CommandExecutor, TabCompleter {
 
-    private final Brain plugin;
+    private final AnimalEconomy plugin;
 
-    public Commands(Brain plugin) {
+    public Commands(AnimalEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -78,17 +78,17 @@ public class Commands implements CommandExecutor, TabCompleter {
 
         switch (action.toLowerCase()) {
             case "add":
-            	plugin.getAnimalEconomy().addKills(playerId, entityType, count);
+            	plugin.addKills(playerId, entityType, count);
                 sender.sendMessage("Додано " + count + " вбивств для " + playerName + ".");
                 break;
 
             case "remove":
-                plugin.getAnimalEconomy().removeKills(playerId, entityType, count);
+                plugin.removeKills(playerId, entityType, count);
                 sender.sendMessage("Знято " + count + " вбивств для " + playerName + ".");
                 break;
 
             case "set":
-            	plugin.getAnimalEconomy().setKills(playerId, entityType, count);
+            	plugin.setKills(playerId, entityType, count);
                 sender.sendMessage("Встановлено " + count + " вбивств для " + playerName + ".");
                 break;
 

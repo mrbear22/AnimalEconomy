@@ -40,7 +40,7 @@ public class PlanAPI implements DataExtension {
                 .columnOne("Mob Type", Icon.called("dragon").of(Family.REGULAR).build())
                 .columnTwo("Heads", Icon.called("count").build());
 
-        Map<EntityType, Integer> mobs = Brain.getInstance().getAnimalEconomy().getAllKills(playerUUID);
+        Map<EntityType, Integer> mobs = AnimalEconomy.getAllKills(playerUUID);
         
         int total = 0;
         
