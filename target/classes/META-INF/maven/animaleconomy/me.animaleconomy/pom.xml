@@ -17,6 +17,7 @@
 				<directory>${basedir}/src/main/java/</directory>
 				<includes>
 					<include>plugin.yml</include>
+					<include>config.yml</include>
 				</includes>
 			</resource>
 		</resources>
@@ -59,6 +60,10 @@
 			<id>jitpack</id>
 			<url>https://jitpack.io</url>
 		</repository>
+	    <repository>
+	        <id>minecraft-libraries</id>
+	        <url>https://libraries.minecraft.net</url>
+	    </repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -78,6 +83,12 @@
 			<artifactId>Plan</artifactId>
 			<version>5.6.2883</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>com.mojang</groupId>
+		    <artifactId>authlib</artifactId>
+		    <version>3.2.38</version>
+		    <scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>

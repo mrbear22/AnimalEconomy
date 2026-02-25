@@ -10,7 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class AnimalEconomy extends JavaPlugin {
@@ -81,6 +83,18 @@ public class AnimalEconomy extends JavaPlugin {
         return new HashMap<>(playerKills.getOrDefault(uuid, new HashMap<>()));
     }
 
+    public static ItemStack getHead(EntityType type) {
+        return MobHeads.getHead(type);
+    }
+
+    public static ItemStack getHead(Entity entity) {
+        return MobHeads.getHead(entity.getType());
+    }
+
+    public static boolean hasHead(EntityType type) {
+        return MobHeads.hasHead(type);
+    }
+    
     public void shutdown() {
         saveData();
         playerKills.clear();
